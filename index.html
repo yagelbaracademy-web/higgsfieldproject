@@ -93,7 +93,7 @@
     animation:riseIn 1.1s var(--ease) .3s forwards;
   }
   .hero .brand .mark{ font-size:13px; letter-spacing:.3em; font-weight:700; color:var(--gold-soft); }
-  .hero .brand .tag{ font-size:14px; color:rgba(251,249,245,0.75); font-weight:300; }
+  .hero .brand .tag{ font-size:14px; color:rgba(251,249,245,0.75); font-weight:300; max-width:36ch; line-height:1.4; }
   .hero h1{
     font-size:clamp(32px,5.4vw,64px);
     line-height:1.14; font-weight:600; letter-spacing:-0.01em;
@@ -147,6 +147,41 @@
   .reveal.d1{ transition-delay:.05s; }
   .reveal.d2{ transition-delay:.18s; }
   .reveal.d3{ transition-delay:.3s; }
+
+  /* ---------- REAL INSTALLATIONS ---------- */
+  .real{
+    background:var(--soft-black); color:var(--warm-white);
+    padding:min(16vh,150px) 0 min(10vh,90px);
+  }
+  .real .wrap{ max-width:1160px; }
+  .real .heading{ max-width:640px; margin-bottom:56px; }
+  .real h2{
+    font-size:clamp(28px,4vw,44px); font-weight:600; line-height:1.22; letter-spacing:-0.01em;
+    margin-top:16px;
+  }
+  .real .sub{
+    margin-top:18px; font-size:clamp(15px,1.6vw,18px); font-weight:300; line-height:1.6;
+    color:rgba(251,249,245,.78); max-width:52ch;
+  }
+  .real-gallery{
+    display:flex; gap:16px; overflow-x:auto; padding:4px 6vw 12px; margin:0 -6vw;
+    scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;
+  }
+  .real-gallery::-webkit-scrollbar{ height:0; }
+  .real-gallery figure{
+    flex:0 0 auto; width:min(78vw,320px); scroll-snap-align:start;
+    border-radius:4px; overflow:hidden; position:relative;
+    aspect-ratio:4/5; background:#000;
+  }
+  .real-gallery img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    filter:grayscale(0.08);
+  }
+  .real-gallery figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:16px 18px;
+    font-size:12px; letter-spacing:.05em; color:rgba(251,249,245,.85); font-weight:400;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%);
+  }
 
   /* ---------- MESSAGE (calm section) ---------- */
   .message{
@@ -273,7 +308,7 @@
   <div class="content">
     <div class="brand">
       <span class="mark">LEZICHRAM</span>
-      <span class="tag">A visual memory concept by Yagel Bar</span>
+      <span class="tag">A visual memory concept by Yagel Bar — inspired by a real installation already standing in Israel</span>
     </div>
     <h1>When someone is gone, they leave memories behind.</h1>
     <p class="sub">This sculpture becomes a window into those memories.</p>
@@ -337,6 +372,23 @@
   </div>
 </section>
 
+<!-- REAL INSTALLATIONS — proof this already exists -->
+<section class="real reveal-section">
+  <div class="wrap">
+    <div class="heading">
+      <span class="eyebrow reveal d1">Not only a vision</span>
+      <h2 class="reveal d2">This sculpture already stands in Israel.</h2>
+      <p class="sub reveal d3">Before it was a concept, it was installed — on Tel Aviv's streets and beaches, marking the places where someone's presence is missing.</p>
+    </div>
+    <div class="real-gallery reveal d3">
+      <figure><img src="images/11-real-beach-day.jpg" alt="The sculpture standing on a Tel Aviv beach promenade in daylight, with passersby beside it." loading="lazy"><figcaption>Tel Aviv beach promenade</figcaption></figure>
+      <figure><img src="images/08-real-beach-sunset.jpg" alt="The sculpture on the Tel Aviv beach promenade at sunset, with a sign reading about the space that remains." loading="lazy"><figcaption>Sunset, the promenade</figcaption></figure>
+      <figure><img src="images/10-real-city-square.jpg" alt="The sculpture standing in a Tel Aviv city square with a fountain and passersby in the background." loading="lazy"><figcaption>A city square in Tel Aviv</figcaption></figure>
+      <figure><img src="images/09-real-city-street.jpg" alt="The sculpture on a Tel Aviv street corner, with traffic and passersby around it." loading="lazy"><figcaption>A street corner in Tel Aviv</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 4 — THE MESSAGE -->
 <section class="message reveal-section">
   <div class="wrap">
@@ -354,7 +406,7 @@
     <h2 class="reveal d2" style="margin-top:16px;">This vision became part of Lezichram.</h2>
     <p class="reveal d3">Lezichram is a memorial project created by Yagel Bar. It reimagines remembrance by focusing not only on loss, but on the life, memories, and human moments that remain.</p>
     <div class="stats reveal d3">
-      <div class="stat"><div class="num">100M+</div><div class="label">views across memorial stories</div></div>
+      <div class="stat"><div class="num">150M+</div><div class="label">views on Instagram</div></div>
       <div class="stat"><div class="num">20,000+</div><div class="label">memorial stories created</div></div>
       <div class="stat"><div class="num">Digital &amp; physical</div><div class="label">memorial experiences</div></div>
     </div>
